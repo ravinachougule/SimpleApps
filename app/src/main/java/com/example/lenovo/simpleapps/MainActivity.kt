@@ -2,6 +2,7 @@ package com.example.lenovo.simpleapps
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,10 +17,12 @@ class MainActivity : AppCompatActivity() {
             if(no==pass)
             {
                 txtResult.text="Successful"
+                Toast.makeText(this,"Login Successful",Toast.LENGTH_LONG).show()
             }
             else
             {
                 txtResult.text="Fail"
+                Toast.makeText(this,"Login Unsuccessful",Toast.LENGTH_LONG).show()
             }
         }
     }
